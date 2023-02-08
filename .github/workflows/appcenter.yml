@@ -7,7 +7,7 @@ on:
 env:
   DotNetVersion: 7.0
   Configuration: Release
-  Framework: ${{ env.DotNetVersion }}-android
+  Framework: ${{ DotNetVersion }}-android
   AppId: me.level120.myapp
 
 jobs:
