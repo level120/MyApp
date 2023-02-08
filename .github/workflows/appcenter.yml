@@ -21,8 +21,8 @@ jobs:
       with:
         dotnet-version: ${{ env.DotNetVersion }}
 
-    # - run: |
-    #     dotnet workload install maui
+    - run: |
+        dotnet workload install maui
 
     - run: |
         dotnet restore
