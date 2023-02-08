@@ -44,7 +44,7 @@ jobs:
 
     - uses: wzieba/AppCenter-Github-Action@v1
       with:
-        appName: level120/My-App
+        appName: level120/MyApp
         token: ${{ secrets.APP_CENTER }}
         group: Collaborators
         file: artifact/${{ env.AppId }}-Signed.apk
