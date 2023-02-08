@@ -33,7 +33,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         path: |
-          src/MyApp/bin/${{ env.Configuration }}/${{ env.Framework }}/publish/*.apk
+          MyApp/bin/${{ env.Configuration }}/${{ env.Framework }}/publish/**/*.apk
 
   deploy:
     runs-on: ubuntu-latest
