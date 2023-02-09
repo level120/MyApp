@@ -9,6 +9,7 @@ env:
   Configuration: Release
   Framework: net7.0-android
   AppId: me.level120.myapp
+  AppName: level120/MyApp
 
 jobs:
   build:
@@ -44,7 +45,7 @@ jobs:
 
     - uses: wzieba/AppCenter-Github-Action@v1
       with:
-        appName: level120/MyApp
+        appName: ${{ env.AppName }}
         token: ${{ secrets.APP_CENTER }}
         group: Collaborators
         file: artifact/${{ env.AppId }}-Signed.apk
