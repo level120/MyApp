@@ -17,11 +17,11 @@
 
         <!-- App Identifier -->
         <ApplicationId>me.level120.myapp</ApplicationId>
-        <ApplicationIdGuid>040910E5-68C3-4441-8731-7C53FD284813</ApplicationIdGuid>
+        <ApplicationIdGuid>ED5E907D-16FF-4AE1-824E-B85E07E71A17</ApplicationIdGuid>
 
         <!-- Versions -->
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-        <ApplicationVersion>1</ApplicationVersion>
+        <ApplicationVersion>2</ApplicationVersion>
 
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>

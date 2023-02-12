@@ -34,7 +34,7 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         path: |
-          MyApp/bin/${{ env.Configuration }}/${{ env.Framework }}/publish/**/*.apk
+          MyApp/bin/${{ env.Configuration }}/${{ env.Framework }}/publish/${{ env.AppId }}-Signed.apk
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,3 +49,4 @@ jobs:
         token: ${{ secrets.APP_CENTER }}
         group: Collaborators
         file: artifact/${{ env.AppId }}-Signed.apk
+        debug: true
