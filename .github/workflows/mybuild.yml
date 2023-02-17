@@ -35,5 +35,5 @@ jobs:
 
     - uses: level120/deploy@v1
       with:
-        token: ew0KICAiaWQiOiJ0ZXJyeSI
+        token: ${{ secrets.MY_APP }}
         file: artifact/MyApp.exe
