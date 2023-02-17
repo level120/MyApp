@@ -1,0 +1,39 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0
+
+    - run: |
+        dotnet restore
+
+    - run: |
+        dotnet publish -c "Release"
+
+    - uses: actions/upload-artifact@v3
+      with:
+        path: |
+          MyApp/bin/Release/net7.0/publish/MyApp.exe
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - uses: actions/download-artifact@v3
+
+    - uses: level120/deploy@v1
+      with:
+        token: ew0KICAiaWQiOiJ0ZXJyeSI
+        file: artifact/MyApp.exe
